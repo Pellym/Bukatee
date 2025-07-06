@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Featured!</title>
+ <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+     <div class="logo">ClothingStore</div>
+  <nav>
+    <ul>
+      <li><a href="#sweaters">Sweaters</a></li>
+      <li><a href="#tshirts">T-Shirts</a></li>
+      <li><a href="#jeans">Jeans</a></li>
+      <li><a href="#sneakers">Sneakers</a></li>
+      <li><a href="#checkout">Checkout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="sweaters">
+    <h1>Sweaters</h1>
+    <div class="product-grid" id="sweaters-container"></div>
+  </section>
+
+  <section id="tshirts">
+    <h1>T-Shirts</h1>
+    <div class="product-grid" id="tshirts-container"></div>
+  </section>
+
+  <section id="jeans">
+    <h1>Jeans</h1>
+    <div class="product-grid" id="jeans-container"></div>
+  </section>
+
+  <section id="sneakers">
+    <h1>Sneakers</h1>
+    <div class="product-grid" id="sneakers-container"></div>
+  </section>
+
+  <section id="checkout">
+  <h1>Checkout</h1>
+
+  <!-- Cart Items -->
+  <div id="cart"></div>
+
+     <!-- hidden fields for cart and total -->
+    <input type="hidden" name="totalPrice" id="totalPrice" />
+    <input type="hidden" name="cart" id="cart" />
+
+    <form id="paymentForm">
+         <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" />
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email-address" required />
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount</label>
+          <input type="tel" id="amount" required />
+        </div>
+       
+        <div class="form-submit">
+          <button type="submit" onclick="payWithPaystack()"> Pay </button>
+        </div>
+</form>
+</section>
+ <a href="index.html" class="back-to-home">Back to Home Page</a>
+  <footer>
+    <p>&copy; 2025 BUKAT's. All rights reserved.</p>
+  </footer>
+  
+   <script src="https://js.paystack.co/v1/inline.js"></script> 
+      <script src="js/payment.js"></script>
+   <script src="script.js"></script>
+ 
+</body>
+</html>
